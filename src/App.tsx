@@ -816,15 +816,15 @@ export default function App() {
          </div>
       </header>
     
-      <main className="flex-1 flex overflow-hidden relative">
+      <main className="flex-1 flex flex-col sm:flex-row overflow-hidden relative">
          {/* Left Toolbox */}
          {appMode === 'FREE' && (
-         <aside className="w-64 md:w-80 bg-white border-r border-gray-200 shadow-[4px_0_12px_rgba(0,0,0,0.02)] overflow-y-auto p-5 flex flex-col z-20 select-none hidden sm:flex">
-            <div className="mb-6">
-               <h2 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2"><LayoutGrid size={16}/> 도구함</h2>
-               <p className="text-xs text-gray-500 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100">조각을 클릭하여 대기 영역으로 복사하거나, 캔버스로 직접 드래그하여 배치하세요.</p>
+         <aside className="w-full h-56 sm:h-auto sm:w-64 md:w-80 flex-shrink-0 bg-white border-b sm:border-b-0 sm:border-r border-gray-200 shadow-[4px_0_12px_rgba(0,0,0,0.02)] overflow-y-auto p-4 sm:p-5 flex flex-col z-20 select-none">
+            <div className="mb-4 sm:mb-6 flex-shrink-0">
+               <h2 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-2 sm:mb-3 flex items-center gap-2"><LayoutGrid size={16}/> 도구함</h2>
+               <p className="text-xs text-gray-500 leading-relaxed bg-slate-50 p-2 sm:p-3 rounded-xl border border-slate-100">조각을 클릭하여 보관함으로 복사하거나, 캔버스로 직접 드래그하세요.</p>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 sm:grid-cols-2 gap-2 sm:gap-3">
                {toolboxPieces.map(pt => (
                   <div key={pt.id} className="relative group bg-slate-50 opacity-90 hover:opacity-100 p-4 rounded-3xl border border-slate-200 hover:border-indigo-300 hover:shadow-md hover:shadow-indigo-100/50 transition-all flex flex-col items-center justify-center min-h-[90px]">
                      <div 
