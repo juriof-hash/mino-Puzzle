@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { RotateCw, FlipHorizontal, Trash2, LayoutGrid, Hand, Plus, PenTool, RotateCcw, Brain } from 'lucide-react';
+import { RotateCw, FlipHorizontal, Trash2, LayoutGrid, Hand, Plus, PenTool, RotateCcw, Brain, Star } from 'lucide-react';
 
 // Math Utilities & Definitions
 type Point = { x: number; y: number };
@@ -958,6 +958,67 @@ export default function App() {
                   ))}
                </div>
             </div>
+
+            {/* AdSense SEO & Guide Article */}
+            <article className="w-full max-w-4xl mt-24 mb-16 p-8 sm:p-10 bg-white rounded-[2.5rem] border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-slate-600 leading-relaxed mx-auto">
+               <header className="mb-10 text-center">
+                  <h2 className="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight mb-4">펜토미노 퍼즐 및 게임 가이드</h2>
+                  <p className="text-slate-500">두뇌 발달과 공간 지각력을 기르는 최고의 퍼즐 세계에 오신 것을 환영합니다.</p>
+               </header>
+               
+               <div className="space-y-10">
+                  <section>
+                      <h3 className="text-xl font-bold text-indigo-900 mb-4 flex items-center gap-2"><Brain className="text-indigo-500" size={24} /> 펜토미노(Pentomino)란?</h3>
+                      <p className="mb-3 text-slate-700">
+                         <strong>펜토미노</strong>는 5개의 정사각형이 변끼리 맞닿아 이루어진 다각형 퍼즐입니다. 총 12가지의 서로 다른 형태의 조각이 존재하며, 고대부터 수학적 사고력과 공간 지각력을 기르는 데 활용되어 온 대표적인 두뇌 퍼즐입니다.
+                      </p>
+                      <p className="text-slate-700">
+                         본 퍼즐 앱은 웹 브라우저에서 편리하게 펜토미노 조각을 이리저리 돌려보고 맞추며 창의적인 도형을 만들 수 있도록 제작되었습니다. 태블릿과 모바일, PC 환경에서 별도의 설치 없이 언제든 즐길 수 있습니다.
+                      </p>
+                  </section>
+
+                  <section>
+                      <h3 className="text-xl font-bold text-indigo-900 mb-4 flex items-center gap-2"><LayoutGrid className="text-indigo-500" size={24} /> 자유 모드 (도형 만들기)</h3>
+                      <p className="mb-4 text-slate-700">
+                         자유 모드에서는 제공된 12개의 펜토미노 조각을 마음대로 조합하여 동물, 글씨, 기하학적 무늬 등 어떤 것이든 만들어볼 수 있습니다.
+                      </p>
+                      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                         <ul className="space-y-3">
+                             <li className="flex gap-3"><span className="text-indigo-500 font-bold">1.</span> <span>왼쪽 도구함에서 원하는 조각을 클릭하거나 드래그하여 화면 위로 가져오세요.</span></li>
+                             <li className="flex gap-3"><span className="text-indigo-500 font-bold">2.</span> <span>조각 아래의 <RotateCw size={16} className="inline-block text-slate-400 mx-0.5" /> 회전, <FlipHorizontal size={16} className="inline-block text-slate-400 mx-0.5" /> 뒤집기 버튼을 누르거나 조각을 우클릭하여 방향을 바꿀 수 있습니다.</span></li>
+                             <li className="flex gap-3"><span className="text-indigo-500 font-bold">3.</span> <span>캔버스 우측 상단의 지우개 도구를 사용하여 모양을 수정하며 나만의 작품을 완성해 보세요.</span></li>
+                         </ul>
+                      </div>
+                  </section>
+
+                  <section>
+                      <h3 className="text-xl font-bold text-indigo-900 mb-4 flex items-center gap-2"><Star className="text-indigo-500" size={24} /> 게임 모드 (퍼즐 채우기)</h3>
+                      <p className="mb-4 text-slate-700">
+                         유명 보드게임처럼 주어진 빈칸을 지정된 조각만으로 정확히 채워 넣는 퍼즐 게임 모드입니다. 당신의 공간 지각력과 순발력을 테스트해보세요!
+                      </p>
+                      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                         <ul className="space-y-3">
+                             <li className="flex gap-3"><span className="text-emerald-500 font-bold">✓</span> <span>상단 난이도 영역에서 별 3개 ~ 5개의 난이도를 선택한 뒤 <strong>새 문제 생성</strong>을 누르세요.</span></li>
+                             <li className="flex gap-3"><span className="text-emerald-500 font-bold">✓</span> <span>하단 <strong>문제 조각 보관함</strong>에 주어지는 조각만을 사용하여 중앙의 회색 빈칸을 완벽하게 덮어야 합니다.</span></li>
+                             <li className="flex gap-3"><span className="text-emerald-500 font-bold">✓</span> <span>조각이 캔버스 밖으로 나가거나 서로 겹칠 수 없으므로 논리적인 사고가 필요합니다.</span></li>
+                         </ul>
+                      </div>
+                  </section>
+
+                  <section>
+                      <h3 className="text-xl font-bold text-indigo-900 mb-4 flex items-center gap-2"><Hand className="text-indigo-500" size={24} /> 두뇌 발달과 교육적 효과</h3>
+                      <p className="text-slate-700 leading-relaxed">
+                         본 시뮬레이터는 남녀노소 누구나 시각적 정보 처리 능력을 기르고 집중력을 향상하는 데 큰 도움을 줍니다. 어린이들에게는 기하학과 수학의 '도형' 단원을 직관적으로 이해할 수 있는 훌륭한 디지털 교구가 되며, 성인 및 어르신들에게는 뇌 활성화를 통한 인지 기능 유지, 치매 예방, 스트레스 해소를 위한 건전한 취미가 될 수 있습니다. 매일 새로운 문제를 시도하며 공간 사고력을 건강하게 자극해 보세요.
+                      </p>
+                  </section>
+
+                  {/* Placeholder for Display Ads / AdSense Context */}
+                  <div className="mt-12 pt-8 border-t border-slate-100 text-center text-sm font-medium text-slate-400 bg-slate-50/50 rounded-xl py-6 border-dashed">
+                     이 공간은 추후 유익한 정보 및 관련 콘텐츠 항목으로 활용하실 수 있습니다.
+                  </div>
+               </div>
+            </article>
+
          </section>
       </main>
 
